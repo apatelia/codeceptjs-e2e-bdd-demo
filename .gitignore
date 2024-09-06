@@ -1,0 +1,9 @@
+/node_modules/
+/report/
+/output/
+/.vscode/
+
+# file system files.
+.DS_Store
+Thumbs.db
+.directory

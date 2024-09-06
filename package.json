@@ -1,0 +1,43 @@
+{
+  "name": "codeceptjs-e2e-bdd-demo",
+  "version": "1.0.0",
+  "description": "A test automation demo using CodeceptJS testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run --steps && node ./utils/generate-report.ts",
+    "test:parallel": "echo 'No HTML report will be available for parallel executions.' && npx codeceptjs run-workers 4",
+    "test:tag": "echo 'Generate HTML report manually by running \"npm run report\" after this test run.' && npx codeceptjs run --steps --grep ",
+    "test:tag-parallel": "echo 'No HTML report will be available for parallel executions.' && npx codeceptjs run-workers 4 --grep ",
+    "lint": "npx eslint . --fix",
+    "lint:check": "npx eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "report": "node ./utils/generate-report.ts"
+  },
+  "keywords": [
+    "codeceptjs",
+    "codeceptjs-demo",
+    "codeceptjs-e2e",
+    "codeceptjs-ts",
+    "codeceptjs-bdd"
+  ],
+  "author": "Arpan Patelia",
+  "license": "MIT",
+  "devDependencies": {
+    "@codeceptjs/ui": "^1.2.0",
+    "@types/node": "^22.5.4",
+    "codeceptjs": "^3.6.5",
+    "codeceptjs-chai": "^2.3.5",
+    "codeceptjs-cucumber-json-reporter": "^1.0.14",
+    "cucumber-html-reporter": "^7.1.1",
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "playwright": "^1.47.0",
+    "prettier": "3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.4.0"
+  }
+}
