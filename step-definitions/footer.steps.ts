@@ -41,7 +41,7 @@ When("I click {string} link from footer", async (socialMedia: string) => {
 });
 
 Then("it should open correct {string} in a new tab", async (url: string) => {
-  await I.wait(2);
+  await I.waitForNumberOfTabs(2, 5);
   await I.switchToNextTab();
   await I.seeInCurrentUrl(url);
 });

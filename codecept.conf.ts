@@ -10,9 +10,6 @@ export const config: CodeceptJS.MainConfig = {
     },
     ChaiWrapper: {
       require: "codeceptjs-chai"
-    },
-    Mochawesome: {
-      uniqueScreenshotNames: "true"
     }
   },
   plugins: {
@@ -44,24 +41,6 @@ export const config: CodeceptJS.MainConfig = {
       "./step-definitions/header.steps.ts",
       "./step-definitions/footer.steps.ts"
     ]
-  },
-  mocha: {
-    reporterOptions: {
-      "codeceptjs-cli-reporter": {
-        stdout: "-",
-        options: {
-          steps: true
-        }
-      },
-      mochawesome: {
-        stdout: "./output/console.log",
-        options: {
-          reportDir: "./report",
-          reportFilename: "report",
-          json: false
-        }
-      }
-    }
   },
   fullPromiseBased: true
 };

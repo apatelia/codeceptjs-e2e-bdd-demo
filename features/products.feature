@@ -15,9 +15,9 @@ Feature: Products
   Scenario: Test that I am able to remove a product from the cart
     When I add "Sauce Labs Bike Light" to the cart
     Then I should be able to remove "Sauce Labs Bike Light" from the cart, using the Remove button
-    Then the cart item badge must not be displayed
+    And the cart item badge must not be displayed
 
-  @logout @skip
+  @logout
   Scenario: Test that I am able to log out from the products page
     When I click Log out from hamburger menu
     Then I must be logged out
