@@ -11,9 +11,9 @@ const options = {
   metadata: {
     SUT: "https://www.saucedemo.com",
     "Test Environment": "DEMO",
-    Browser: "Chromium"
+    Browser: "Chromium",
   },
-  failedSummaryReport: true
+  failedSummaryReport: true,
 };
 
 reporter.generate(options);

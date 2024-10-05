@@ -6,10 +6,8 @@
   "scripts": {
     "test": "npx codeceptjs run --steps && node ./utils/generate-report.ts",
     "test:tag": "echo 'Generate HTML report manually by running \"npm run report\" after this test run.' && npx codeceptjs run --steps --grep ",
-    "lint": "npx eslint . --fix",
+    "lint:fix": "npx eslint . --fix",
     "lint:check": "npx eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
     "report": "node ./utils/generate-report.ts"
   },
   "keywords": [
@@ -29,11 +27,9 @@
     "codeceptjs-cucumber-json-reporter": "^1.0.14",
     "cucumber-html-reporter": "^7.1.1",
     "eslint": "^9.11.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.9.0",
     "playwright": "^1.47.2",
-    "prettier": "3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.7.0"
