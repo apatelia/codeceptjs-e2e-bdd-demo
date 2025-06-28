@@ -10,7 +10,7 @@ export class footerFragment {
     this.twitterLink = "a[data-test='social-twitter']";
     this.facebookLink = "a[data-test='social-facebook']";
     this.linkedInLink = "a[data-test='social-linkedin']";
-    this.copyrightText = "div.footer_copy";
+    this.copyrightText = "div[data-test ='footer-copy']";
   }
 
   async clickTwitterLink(): Promise<void> {

@@ -5,7 +5,8 @@ Then("copyright text in footer should be visible", async () => {
 });
 
 Then("the copyright text contents should be correct", async () => {
-  await I.seeTextEquals("© 2024 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy", footerFragment.copyrightText);
+  const currentYear = new Date().getFullYear();
+  await I.seeTextEquals(`© ${currentYear} Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy`, footerFragment.copyrightText);
 });
 
 Given("that {string} link in footer is visible", async (link: string) => {
